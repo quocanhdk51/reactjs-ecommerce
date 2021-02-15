@@ -1,0 +1,57 @@
+.home{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 15px 0;
+    position: relative;
+    
+  }
+  
+  .home .player{
+    opacity: 1;
+  }
+
+  .home .player video{
+    width: 1200px;
+    height: 564px;
+  }
+
+
+
+  .home .body{
+    list-style: none;
+    display: inline-block;
+    padding: 0 30px;
+    overflow: hidden;
+    /* max-width: 370px;
+    height: 1000px; 
+    padding: 15px;
+    margin: 15px; */
+    
+  }
+
+  .home .brands{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #555;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .home .list_img{
+    width: 100%; 
+    min-height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+  } 
+  

@@ -54,6 +54,7 @@ const Register = () => {
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
   const [password, setPassword] = useState("");
   const [successful, setSuccessful] = useState(false);
 
@@ -70,6 +71,11 @@ const Register = () => {
     setEmail(email);
   };
 
+  const onChangeAddress = (e) => {
+    const address = e.target.value;
+    setAddress(address);
+  };
+
   const onChangePassword = (e) => {
     const password = e.target.value;
     setPassword(password);
@@ -83,7 +89,9 @@ const Register = () => {
     form.current.validateAll();
 
     if (checkBtn.current.context._errors.length === 0) {
-      dispatch(register(username, email, password))
+      console.log(password);
+      const data = {username: username, email: email, address: address, password: password}
+      dispatch(register(data))
         .then(() => {
           setSuccessful(true);
         })
@@ -126,6 +134,18 @@ const Register = () => {
                   value={email}
                   onChange={onChangeEmail}
                   validations={[required, validEmail]}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="address">Address</label>
+                <Input
+                  type="text"
+                  className="form-control"
+                  name="address"
+                  value={address}
+                  onChange={onChangeAddress}
+                  validations={[required]}
                 />
               </div>
 

@@ -3,6 +3,10 @@ label {
   margin-top: 10px;
 }
 
+/* .App {
+  text-align: center;
+} */
+
 .card-container.card {
   max-width: 350px !important;
   padding: 40px 40px;
@@ -29,4 +33,19 @@ label {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+
+.cart-icon{
+  position: relative;
+  margin-right: 15px;
+}
+.cart-icon span{
+  background: crimson;
+  border-radius: 20px;
+  color: white;
+  position: absolute;
+  top:-10px;
+  right: -10px;
+  font-size: 10px;
+  padding: 5px;
 }
